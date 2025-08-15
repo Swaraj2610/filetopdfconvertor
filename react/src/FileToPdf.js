@@ -3,7 +3,7 @@ import axios from "axios";
 
 function FileToPdf() {
   const [file, setFile] = useState(null);
-  const [fileType, setFileType] = useState("image"); // "image" or "word"
+  const [fileType, setFileType] = useState("image"); 
 
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
@@ -11,7 +11,7 @@ function FileToPdf() {
 
   const handleTypeChange = (event) => {
     setFileType(event.target.value);
-    setFile(null); // reset file when type changes
+    setFile(null); 
   };
 
   const handleUpload = async () => {
@@ -44,7 +44,6 @@ function FileToPdf() {
     }
   };
 
-  // Styles (same as yours, slightly adjusted)
   const containerStyle = {
     maxWidth: "400px",
     margin: "50px auto",
@@ -124,7 +123,6 @@ function FileToPdf() {
         />
       </div>
 
-      {/* Upload button */}
       <button
         onClick={handleUpload}
         style={buttonStyle}
@@ -142,3 +140,4 @@ function FileToPdf() {
 }
 
 export default FileToPdf;
+
